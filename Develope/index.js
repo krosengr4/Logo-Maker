@@ -1,4 +1,5 @@
 // Include packages needed for this application
+const generateLogo = require('./generateLogo');
 
 // Array of questions to ask the user
 const questionsArr =[
