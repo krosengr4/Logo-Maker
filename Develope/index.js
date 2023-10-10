@@ -1,57 +1,53 @@
 // Include packages needed for this application
-// const generateLogo = require('./generateLogo');
 const inquirer = require('inquirer'); 
 const fs = require('fs')
 
 const shapes = ['Square', 'Circle', 'Triangle'];
 
-// Array of questions to ask the user
-const questionsArr =[
-'Please provide 3 letters for the text of your logo:',
-'Please provide a color for the text:',
-'Please provide a shape for your logo:',
-'Please provide a color for the shape:', 
-]
-
-// Create a prompt script
+// Questions to ask the user. 
 const promptQuestions= [
     { 
       type: 'input',
-      name: 'letters',
-      message: questionsArr[0],
+      name: 'text',
+      message: 'Please Provide Text for your Logo (up to 3 letters):',
+      validate: function(text) {
+        return text.length <= 3 && text.length > 0; 
+      },
     },
     { 
       type: 'input',
-      name: 'txtColor',
-      message: questionsArr[1],
+      name: 'textColor',
+      message: 'Please Provide a Color for the Text:',
     },
     { 
       type: 'list',
       name: 'shape',
       choices: shapes,
-      message: questionsArr[2],
+      message: 'Please Provide a Shape for your Logo:',
     },
     { 
       type: 'input',
-      name: 'shpColor',
-      message: questionsArr[3],
+      name: 'shapeColor',
+      message: 'Please Provide a Color for the Shape:',
     },
   ];
 
-// Create function to initialize the prompt script and save as an SVG file called logo.svg.
+// Function to get user input and write that user input to a svg file. 
 function init() {
   inquirer.prompt(promptQuestions)
-  .then((response) => {
-    const fileName = './your_logo/logo.svg';
 
-    fs.writeFile(fileName, JSON.stringify(response, null, 2), (err) => {
-      if(err){
-        console.log(err)
-      } else {
-        console.log("Success write to file! Check the 'your_logo' folder.")
-      }
-    });
-})
+
+//   .then((response) => {
+//     const fileName = './your_logo/logo.svg';
+
+//     fs.writeFile(fileName, JSON.stringify(response, null, 2), (err) => {
+//       if(err){
+//         console.log(err)
+//       } else {
+//         console.log("Success write to file! Check the 'your_logo' folder.")
+//       }
+//     });
+// })
 };
 
 
