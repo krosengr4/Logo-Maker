@@ -1,0 +1,6 @@
+{
+  "letters": "ugk",
+  "txtColor": "fgj",
+  "shape": "fj",
+  "shpColor": "dgh"
+}
