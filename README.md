@@ -16,8 +16,10 @@
 Description for your project
 
 ## Installation
-1) Clone the project to local computer.
-2) Use npm install to install files if necessary.
+1) Node
+2) Inquirer v. 8.2.4
+3) npm init
+4) npm jest
 
 ## Usage
 To Use the Application:
