@@ -7,11 +7,11 @@ const questions= [
       name: 'text',
       message: 'Please Provide Text for your Logo (up to 3 letters):',
       validate: function(text) {
-        return text.length <= 3 && text.length > 0; 
+        return text.length <= 3 && text.length > 0; //<--- Validates that no more than 3 letters go in
       },
     },
     { 
-      type: 'input',
+      type: 'input',   
       name: 'textColor',
       message: 'Please Provide a Color for the Text:',
     },
@@ -28,4 +28,6 @@ const questions= [
     },
   ];
 
+
+  // Export the questions array
   module.exports = questions;
