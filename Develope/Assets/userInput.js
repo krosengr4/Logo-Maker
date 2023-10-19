@@ -10,15 +10,4 @@ function userInput() {
 
 module.exports = userInput;
 
-//     .then((response) => {
-//       const fileName = './your_logo/logo.svg';
-  
-//       fs.writeFile(fileName, JSON.stringify(response, null, 2), (err) => {
-//         if(err){
-//           console.log(err)
-//         } else {
-//           console.log("Success write to file! Check the 'your_logo' folder.")
-//         }
-//       });
-//   })
 
