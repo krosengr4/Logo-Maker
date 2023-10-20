@@ -8,9 +8,10 @@ const fs = require('fs');
 
 
 function init () {
-  //* Calls user input prompt
+  // Calls user input prompt
   userInput()
-  //* Writes to .svg file after generating Svg.
+  
+  // Generates .SVG format and then writes it to a file.
     .then((response) => {
       const svgData = generateSvg(response);
 

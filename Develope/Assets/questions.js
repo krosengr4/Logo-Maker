@@ -1,3 +1,5 @@
+//! This file has the questions that the user will be asked.
+
 const shapes = ['Square', 'Circle', 'Triangle'];
 
 // Questions to ask the user. 

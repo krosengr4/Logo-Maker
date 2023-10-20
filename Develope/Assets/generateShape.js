@@ -1,5 +1,6 @@
-//* Class functions for each shape to return respective svg data with the color. 
+//! This file creates shape classes and exports them.
 
+//* Class functions for each shape to return respective svg data with the color. 
 class Square {
     constructor () {
         this.color = '';
@@ -37,7 +38,7 @@ class Triangle {
 // const testShape = new Circle
 // testShape.setColor('Red');
 // testShape.render();
-// console.log(testShape);
+// console.log(testShape.render());
 
 
 module.exports = {Circle, Triangle, Square};
