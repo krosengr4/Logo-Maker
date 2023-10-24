@@ -8,6 +8,8 @@ function userInput() {
     return inquirer.prompt(questions)
   };
 
+  //// console.log(userInput());
+
 module.exports = userInput;
 
 

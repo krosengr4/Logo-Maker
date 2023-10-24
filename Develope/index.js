@@ -13,6 +13,7 @@ function init () {
   
   // Generates .SVG format and then writes it to a file.
     .then((response) => {
+      //// console.log(response);
       const svgData = generateSvg(response);
 
       fs.writeFile("./your_logo/logo.svg", svgData, (err) => 
@@ -22,17 +23,3 @@ function init () {
   };
 
   init();
-
-
-
-
-
-
-
-
-      //    // create the svg data
-  //   const svgData = createSVG(data);
-  //   // write the svg data to logo.svg file
-  //   writeFile("logo.svg", svgData);
-  // })
-  // .catch((error) => console.error(error)); 

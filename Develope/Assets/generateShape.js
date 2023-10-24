@@ -11,7 +11,7 @@ class Square {
     }
     // Gives back svg line
     render() {
-        return `<circle cx="150" cy="100" r="80" fill="${this.color}" />`;
+        return `<rect x="75" y="30" width="150" height="150" fill="${this.color}" />`;
     }
 };
 class Circle {
@@ -33,14 +33,18 @@ class Triangle {
         this.color = color;
     }
     render() {
-        return `<circle cx="150" cy="100" r="80" fill="${this.color}" />`;
+        return `<polygon points="150,10 280,150 20,150" fill="${this.color}" />`;
     }
 };
 
-const testShape = new Circle
-testShape.setColor('Red');
-testShape.render();
-console.log(testShape.render());
+// const testShape = new Circle
+// testShape.setColor('Red');
+// testShape.render();
+// console.log(testShape.render());
 
 
-module.exports = {Circle, Triangle, Square};
+module.exports = {
+    Circle, 
+    Triangle, 
+    Square,
+};

@@ -1,38 +1,58 @@
 //! File to bring all the data together and generate SVG formatted data. 
 
-// Import our shape classes. 
+// Import shape classes. 
 const { Triangle, Square, Circle } = require("./generateShape");
 
 //* switch function to return the svg code with shape and color.
 function renderShapeSvg (data) {
-    let shape;
+    let shape = null;
+    ////console.log(data.shape, '10');
 
-    switch(data) {
-        case 'square' :
+    switch(data.shape) { //<--- data.shape gets 'shape' from 'questions' array.
+        case 'Square' :
             shape = new Square();
             break; 
+            
+            case 'Circle' :
+                shape = new Circle();
+            break;
+            
+            case 'Triangle' :
+                shape = new Triangle();
+                break;
+            }
+            //// console.log(shape, '24');
+            shape.setColor(data.shapeColor); //<--- data.shapeColor gets 'shapeColor' from 'questions' array. 
+            //// console.log(shape.render());
+            return shape.render();
+        };
         
-        case 'circle' :
-            shape = new Circle();
-            break;
+        // function to capatalize all letters in logo.
+        function prettyText (data) {
+            //// console.log(data.text, '32');
 
-        case 'triangle' :
-            shape = new Triangle();
-            break;
-    }
-    shape.setColor(data.shapeColor); //<--- data.shapeColor gets 'shapeColor' from questions array. 
-    return shape.render();
-}
+            let text = data.text;
+            return text.toUpperCase();
+        };
+        
+        // const generateSvg = ({data, textColor, text}) =>
+        // `<svg version='1.1' width='300' height='200' xmlns='http://www.w3.org/2000/svg' />
+        // ${renderShapeSvg(data)}
+        // <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${prettyText(data)}</text>`
+        
+        
+        
+        
+        
+        //* Function to generate the SVG file in the right format.
+        function generateSvg(data, text, textColor) {
+            //// console.log(data.shapeColor, '44');
 
-// function to capatalize all letters in logo.
-function prettyText (text) {
-    return text.toUpperCase();
-};
-
-//* Function to generate the SVG file in the right format.
-const generateSvg = ({shape, textColor, text}) =>
-`<svg version='1.1' width='300' height='200' xmlns='http://www.w3.org/2000/svg' />
-${renderShapeSvg(data.render())}
-<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${prettyText(text)}</text>`
-
-module.exports = generateSvg;
+            let svgData = `<svg version='1.1' width='300' height='200' xmlns='http://www.w3.org/2000/svg'>
+            ${renderShapeSvg(data)}
+            <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${prettyText(data)}</text>`;
+            
+            return svgData;
+        };
+        
+        module.exports = generateSvg;
