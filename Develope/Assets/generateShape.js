@@ -42,7 +42,7 @@ class Triangle {
 // testShape.render();
 // console.log(testShape.render());
 
-
+//* Export our three shape classes.
 module.exports = {
     Circle, 
     Triangle, 
