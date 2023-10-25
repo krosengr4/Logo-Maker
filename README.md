@@ -13,7 +13,7 @@
 - [Questions](#questions)
 
 ## Description
-Description for your project
+The Logo Maker application is a command line application that allows a user to create their own professional logo. The user answers questions in the command line and the logo is generated in a .svg file. 
 
 ## Installation
 1) Node
