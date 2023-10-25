@@ -48,7 +48,7 @@ function renderShapeSvg (data) {
             ${renderShapeSvg(data)}
             <text x="150" y="125" font-size="60" text-anchor="middle" fill="${data.textColor}">${prettyText(data)}</text>
             </svg>`;
-            console.log(data.textColor);
+            //// console.log(data.textColor);
             return svgData;
         };
         

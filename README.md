@@ -25,16 +25,13 @@ The Logo Maker application is a command line application that allows a user to c
 To Use the Application:
 - After cloning the repository code: 
 1) Open your terminal to the "Develope" directory.
-2) In the terminal, type "index.js"
+2) In the terminal, run node index.js
 3) Answer the questions that are prompted in the terminal.
 4) Your logo will appear in the Your_Logo folder.
 5) For any confusions, watch the walk through video below. 
 
 ## Video
-[Walk through video]()
-
-## Images
-![image]()
+[Walk through video](https://watch.screencastify.com/v/0vhdOTDWXLiuwikcjaeP)
 
 ## Tests
 No tests are provided. 
